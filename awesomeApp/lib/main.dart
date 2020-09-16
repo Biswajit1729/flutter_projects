@@ -11,29 +11,39 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Awesome App')),
-      body: Center(
-        child: Container(
-          height: 200,
-          width: 200,
-          decoration: BoxDecoration(
-              //shape: BoxShape.circle,
-              borderRadius: BorderRadius.circular(20),
-              boxShadow: [
-                BoxShadow(
-                    color: Colors.grey[400],
-                    blurRadius: 10,
-                    //spreadRadius: 1,
-                    offset: Offset(10.0, 10.0))
-              ],
-              color: Colors.teal,
-              gradient: LinearGradient(colors: [Colors.yellow, Colors.pink])),
-          child: Center(
-            child: Text(
-              'hello world',
-              style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Align(
+          child: Container(
+            height: MediaQuery.of(context).size.height,
+            width: MediaQuery.of(context).size.width,
+            color: Colors.black,
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Container(
+                    padding: const EdgeInsets.all(8),
+                    width: 100,
+                    height: 100,
+                    color: Colors.green,
+                  ),
+                  Container(
+                    padding: const EdgeInsets.all(8),
+                    width: 100,
+                    height: 100,
+                    color: Colors.red,
+                  ),
+                  Container(
+                    padding: const EdgeInsets.all(8),
+                    width: 100,
+                    height: 100,
+                    color: Colors.blue,
+                  )
+                ],
+              ),
             ),
           ),
         ),
